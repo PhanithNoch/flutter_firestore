@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_fire/screens/create_screen.dart';
 import 'package:flutter_fire/screens/search_screen.dart';
 import 'package:flutter_fire/screens/update_screen.dart';
+import 'package:flutter_fire/screens/upload_image_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Home(),
+      home: UploadImageScreen(),
+      // home: Home(),
     );
   }
 }
@@ -53,8 +55,8 @@ class _HomeState extends State<Home> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
-          // Navigator.push(
-          //     context, MaterialPageRoute(builder: (context) => CreateScreen()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => CreateScreen()));
         },
       ),
       appBar: AppBar(

@@ -8,7 +8,6 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   final TextEditingController _searchController = TextEditingController();
-
   List<QueryDocumentSnapshot> lstSearchResult = [];
 
   void _search(String keyword) {
